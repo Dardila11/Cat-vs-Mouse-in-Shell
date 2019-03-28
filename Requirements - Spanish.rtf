@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Roboto-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c87059;\cssrgb\c0\c0\c0\c87059;}
+\margl1440\margr1440\vieww25100\viewh6060\viewkind0
+\deftab720
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f0\fs48 \cf2 \expnd0\expndtw0\kerning0
+Dise\'f1ar el juego gatos y ratones en la Intel Galileo usando sh.\
+\
+Requisitos:\
+\
+\'95 1 pulsador de reset\
+\'95 2 pulsadores para controlar el movimiento del gato. Se detecta movimiento al soltar el pulsador. Mientras se tenga pulsado, no se realiza ning\'fan movimiento.\
+\'95 8 leds en los que se mueven el gato y el rat\'f3n.\'a0\
+\'95 1 led para indicar que el gato atrap\'f3 al rat\'f3n.\'a0\
+\'95 Una luz que oscila con un tiempo fijo (rat\'f3n) aparece cada cierto tiempo (consultar como se genera un n\'famero pseudo- aleatorio) en alguno de los 8 leds y permanece ah\'ed por un tiempo determinado.\'a0\
+\'95 Otra luz que siempre est\'e1 encendida (gato) se mueve con los dos botones de direcci\'f3n para desplazarse hasta el rat\'f3n.\'a0\
+\'95 Si el gato alcanza al rat\'f3n (la luz del gato y la del rat\'f3n coinciden) lo atrapa y se enciende un led.\
+Para usar los pines 1 y 0 (gpio50 y gpio51), es necesario configurar los pines GPIO40 y GPIO41 y asignarles al valor de 1.\'a0\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf3 \outl0\strokewidth0 \strokec3 En caso de que los pines 2 y 3 (gpio32 y gpio18), no funcionen, configurar los pines GPIO31 y GPIO30 como salida y asignarles el valor de 1.\cf2 \outl0\strokewidth0 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf2 La sustentaci\'f3n se debe hacer el martes 26 de marzo de 4:00 pm a 6:00 pm\
+\
+\
+SOLUCION\
+1. Configuramos el numero de leds en donde se va a mover el raton\
+2. Movimientos del raton\
+	2.1 Creamos un array donde guardamos los gpio de los LED que estamos utilizamos\
+	2.2 Creamos una variable RANDOM que escoja una posici\'f3n al azar del array\
+	2.3 Obtenemos el valor que tiene la posici\'f3n\
+	2.3 El $valor ser\'e1 el led que vamos a encender (Ejemplo: gpio4)\
+3. Detectar movimiento del gato\
+	3.1 obtenemos posici\'f3n inicial\
+	3.2 Si el movimiento es hacia la izquierda }
